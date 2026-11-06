@@ -15,6 +15,7 @@
  */
 package com.example.lunchtray
 
+import androidx.annotation.StringRes
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
@@ -24,7 +25,13 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.lunchtray.ui.OrderViewModel
 
 // TODO: Screen enum
-
+enum class LunchTrayScreen (@StringRes val title: Int){
+    Start (title = R.string.app_name),
+    Entree (title = R.string.choose_entree),
+    Accompaniment (title = R.string.choose_accompaniment),
+    Side (title = R.string.choose_side_dish),
+    Summary (title = R.string.order_summary)
+}
 // TODO: AppBar
 
 @OptIn(ExperimentalMaterial3Api::class)
